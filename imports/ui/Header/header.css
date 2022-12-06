@@ -1,0 +1,29 @@
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 20px 20px;
+    box-shadow: 0px 0px 7px 1px rgb(0 0 0 / 24%);
+    -webkit-box-shadow: 0px 0px 7px 1px rgb(0 0 0 / 24%);
+    -moz-box-shadow: 0px 0px 7px 1px rgb(0 0 0 / 24%);
+}
+.inner-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logout{
+    cursor: pointer;
+}
+.inner-header-wrapper a {
+    text-decoration: none;
+}
+.logo-wrapper {
+    font-weight: 700;
+    font-size: 20px;
+}
+.users-name-wrapper a {
+    color: #000;
+    font-weight: 500;
+}

@@ -1,0 +1,31 @@
+.inner-home-wrapper {
+    width: 100%;
+    margin-top: 70px;
+    padding: 20px;
+}
+td {
+    border: 1px solid #00000087;
+    padding: 5px;
+}
+.click-td-4{
+    cursor: pointer;
+}
+td.td-1 {
+    width: 20%;
+}
+td.td-2 {
+    width: 40%;
+}
+td.td-3-1 {
+    width: 25%;
+}
+td.td-3-2 {
+    width: 15%;
+}
+.expense-wrapper h4{
+    margin: 15px;
+    text-align: center;
+}
+.expense-wrapper table {
+    width: 100%;
+}

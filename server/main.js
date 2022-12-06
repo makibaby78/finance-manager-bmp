@@ -1,12 +1,24 @@
 import { Meteor } from 'meteor/meteor';
 import { LinksCollection } from '/imports/api/links';
+import { UserCollection } from '/imports/api/userinfo';
+import { Accounts } from 'meteor/accounts-base';
 
 async function insertLink({ title, url }) {
   await LinksCollection.insertAsync({ title, url, createdAt: new Date() });
 }
 
+const SEED_USERNAME = 'meteorite';
+const SEED_PASSWORD = 'password';
+
 Meteor.startup(async () => {
+  if (!Accounts.findUserByUsername(SEED_USERNAME)) {
+    Accounts.createUser({
+      username: SEED_USERNAME,
+      password: SEED_PASSWORD,
+    });
+  }
   // If the Links collection is empty, add some data.
+  
   if (await LinksCollection.find().countAsync() === 0) {
     await insertLink({
       title: 'Do the Tutorial',
